@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Customer.Club.MackSubscription"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:padding="5dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/baseline_arrow_back_24"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingEnd="@dimen/_10sdp"
+        android:text="Mack Subscription"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/color1"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/back"
+        app:layout_constraintBottom_toBottomOf="@id/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/priceLinear"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/edittext_shape"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/text1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select the period :"
+            android:textColor="@color/color1"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/deviceDescription"
+            android:layout_weight="1" />
+        <Spinner
+            android:id="@+id/coursesspinner"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:entries="@array/period"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/monthLinear"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/edittext_shape"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/priceLinear">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number of months :"
+            android:textColor="@color/color1"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/mtext"
+            android:layout_weight="1" />
+        <Spinner
+            android:id="@+id/months"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:entries="@array/months" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/deliveryLinear"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/edittext_shape"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/monthLinear">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Would you like to subscribe at a price of 300 Rs?"
+            android:textColor="@color/color1"
+            android:textSize="@dimen/_15sdp"
+            android:id="@+id/dtext"
+            android:layout_weight="1" />
+        <Spinner
+            android:id="@+id/delivery"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/select" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_shape"
+        android:text="Delivery"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deliveryLinear" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

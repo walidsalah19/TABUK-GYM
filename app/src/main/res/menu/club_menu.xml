@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/clubSubscriptions"
+        android:title="Subscriptions"
+        android:icon="@drawable/subscribtion"/>
+    <item android:id="@+id/clubSports"
+        android:title="Sports"
+        android:icon="@drawable/sport"/>
+    <item android:id="@+id/clubDevices"
+        android:title="Devices"
+        android:icon="@drawable/device"/>
+    <item android:id="@+id/clubProfile"
+        android:title="Profile"
+        android:icon="@drawable/baseline_home_24"/>
+</menu>

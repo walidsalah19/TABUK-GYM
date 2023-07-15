@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/customerHome"
+     android:title="Home"
+        android:icon="@drawable/baseline_home_24"/>
+    <item android:id="@+id/customerSubscriptions"
+        android:title="Subscriptions"
+        android:icon="@drawable/subscribtion"/>
+    <item android:id="@+id/customerDelivery"
+        android:title="Delivery"
+        android:icon="@drawable/delivery"/>
+    <item android:id="@+id/customerProfile"
+        android:title="Home"
+        android:icon="@drawable/baseline_person_pin_24"/>
+</menu>
