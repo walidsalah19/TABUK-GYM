@@ -9,6 +9,9 @@
     <item android:id="@+id/clubDevices"
         android:title="Devices"
         android:icon="@drawable/device"/>
+    <item android:id="@+id/Schedule"
+        android:title="Schedule"
+        android:icon="@drawable/schedule"/>
     <item android:id="@+id/clubProfile"
         android:title="Profile"
         android:icon="@drawable/baseline_home_24"/>

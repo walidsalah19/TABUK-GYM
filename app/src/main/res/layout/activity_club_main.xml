@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Club.ClubMainActivity" android:background="@color/white">
+    tools:context=".Club.ClubMainActivity"
+    android:background="@color/white">
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:animateLayoutChanges="true"
-        app:labelVisibilityMode="labeled"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/club_menu"
         style="@style/BottomNavigationViewStyle"/>
 </RelativeLayout>

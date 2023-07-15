@@ -18,8 +18,22 @@ public class ClubDevices extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mBinding=FragmentClubDevicesBinding.inflate(inflater,container,false);
-
-
+        addSchedule();
         return mBinding.getRoot();
+    }
+    private void addSchedule()
+    {
+        mBinding.addDevice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                changeFragment(new ClubAddDevice());
+            }
+        });
+    }
+    private void changeFragment(Fragment fragment)
+    {
+        getActivity().getSupportFragmentManager().beginTransaction()
+                .replace(R.id.clubLayout,fragment).addToBackStack(null).commit();
+
     }
 }

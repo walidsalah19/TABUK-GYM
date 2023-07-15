@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tabukgym.tabukgym.Admin.MainAdminActivity;
+import com.tabukgym.tabukgym.Club.ClubMainActivity;
 import com.tabukgym.tabukgym.Customer.CommonData;
 import com.tabukgym.tabukgym.Customer.MainCustomerActivity;
 import com.tabukgym.tabukgym.R;
@@ -38,6 +39,9 @@ public class LoginAllUsers extends Fragment {
                 }
                else if (mBinding.Email.getText().toString().equals("admin")) {
                     startActivity(new Intent(getActivity(), MainAdminActivity.class));
+                }
+                else if (mBinding.Email.getText().toString().equals("club")) {
+                    startActivity(new Intent(getActivity(), ClubMainActivity.class));
                 }
             }
         });

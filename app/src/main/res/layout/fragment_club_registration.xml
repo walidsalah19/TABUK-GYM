@@ -113,7 +113,24 @@
                     android:textColorHint="@color/color1"
                     android:textSize="20sp" />
             </LinearLayout>
-
+            <EditText
+                android:id="@+id/subscriptionPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/edittext_shape"
+                android:drawableEnd="@drawable/baseline_attach_money_24"
+                android:drawablePadding="10dp"
+                android:hint="Subscription price"
+                android:inputType="textEmailAddress"
+                android:padding="20dp"
+                android:textColor="@color/color1"
+                android:textColorHint="@color/color1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear" />
             <EditText
                 android:id="@+id/edittextUserNameAr"
                 android:layout_width="match_parent"
@@ -131,7 +148,7 @@
                 android:textColorHint="@color/color1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/linear" />
+                app:layout_constraintTop_toBottomOf="@id/subscriptionPrice" />
 
             <EditText
                 android:id="@+id/edittextId"
@@ -150,6 +167,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edittextUserNameAr" />
+
             <ImageButton
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="@dimen/_40sdp"

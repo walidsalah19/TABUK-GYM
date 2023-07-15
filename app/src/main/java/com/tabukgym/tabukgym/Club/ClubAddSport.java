@@ -9,26 +9,25 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.tabukgym.tabukgym.R;
-import com.tabukgym.tabukgym.databinding.FragmentClubSportBinding;
+import com.tabukgym.tabukgym.UserAccess.SelectUserType;
+import com.tabukgym.tabukgym.databinding.FragmentClubAddSportBinding;
 
-public class ClubSport extends Fragment {
-    private FragmentClubSportBinding mBinding;
+public class ClubAddSport extends Fragment {
+    private FragmentClubAddSportBinding mBinding;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mBinding= FragmentClubSportBinding.inflate(inflater,container,false);
-
-
-        addSport();
+        mBinding=FragmentClubAddSportBinding.inflate(inflater,container,false);
+        back();
         return mBinding.getRoot();
     }
-    private void addSport()
+    private void back()
     {
-        mBinding.addSport.setOnClickListener(new View.OnClickListener() {
+        mBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                changeFragment(new ClubAddSport());
+                changeFragment(new ClubSport());
             }
         });
     }
