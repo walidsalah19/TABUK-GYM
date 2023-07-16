@@ -43,7 +43,7 @@
                 app:layout_constraintBottom_toBottomOf="@id/back" />
 
             <EditText
-                android:id="@+id/edittextUserName"
+                android:id="@+id/clubName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -77,7 +77,7 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edittextUserName" />
+                app:layout_constraintTop_toBottomOf="@id/clubName" />
 
             <LinearLayout
                 android:id="@+id/linear"
@@ -133,7 +133,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/linear" />
             <EditText
-                android:id="@+id/edittextUserNameAr"
+                android:id="@+id/clubPhone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -152,7 +152,7 @@
                 app:layout_constraintTop_toBottomOf="@id/subscriptionPrice" />
 
             <EditText
-                android:id="@+id/edittextId"
+                android:id="@+id/clubComer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -167,13 +167,13 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edittextUserNameAr" />
+                app:layout_constraintTop_toBottomOf="@id/clubPhone" />
 
             <ImageButton
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/baseline_my_location_24"
-                app:layout_constraintTop_toBottomOf="@id/edittextId"
+                app:layout_constraintTop_toBottomOf="@id/clubComer"
                 android:background="@drawable/button_shape"
                 android:layout_margin="@dimen/_10sdp"
                 android:id="@+id/SelectLocation"
@@ -183,7 +183,7 @@
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/baseline_add_a_photo_24"
-                app:layout_constraintTop_toBottomOf="@id/edittextId"
+                app:layout_constraintTop_toBottomOf="@id/clubComer"
                 android:background="@drawable/button_shape"
                 android:layout_margin="@dimen/_10sdp"
                 android:id="@+id/SelectImage"

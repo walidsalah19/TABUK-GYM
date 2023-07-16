@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.tabukgym.tabukgym.Customer.CommonData;
+import com.tabukgym.tabukgym.CommonData;
 import com.tabukgym.tabukgym.R;
 import com.tabukgym.tabukgym.databinding.FragmentSelectUserTypeBinding;
 
