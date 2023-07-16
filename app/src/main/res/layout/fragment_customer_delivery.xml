@@ -12,8 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delivery"
-        android:textColor="@color/color1"
-        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"        android:textSize="@dimen/_20sdp"
         android:id="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,7 +60,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Delivery price :"
-                android:textColor="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 android:textSize="@dimen/_13sdp"
                 android:id="@+id/deviceDescription"
                 android:layout_weight="1" />
@@ -68,8 +69,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="300 Rs"
-                android:textColor="@color/color1"
-                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"                android:textSize="@dimen/_13sdp"
                 android:id="@+id/subscriptionPrice"
                 android:layout_marginStart="@dimen/_14sdp"
                 android:layout_weight="1" />
@@ -84,8 +85,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Duration :"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/durationText"
                     android:layout_weight="1"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -94,8 +95,8 @@
                     android:layout_height="wrap_content"
                     android:text="5pm : 7pm"
                     android:layout_weight="1"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/duration"
                     android:layout_marginStart="@dimen/_14sdp" />
             </LinearLayout>
@@ -109,8 +110,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Date :"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/dateText"
                     android:layout_weight="1"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -119,8 +120,8 @@
                     android:layout_height="wrap_content"
                     android:text="1/7/2022"
                     android:layout_weight="1"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/date"
                     android:layout_marginStart="@dimen/_14sdp" />
             </LinearLayout>
@@ -134,8 +135,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Delivery status :"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/sText"
                     android:layout_weight="1"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -144,8 +145,8 @@
                     android:layout_height="wrap_content"
                     android:text="finished"
                     android:layout_weight="1"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/status"
                     android:layout_marginStart="@dimen/_14sdp" />
             </LinearLayout>

@@ -34,7 +34,8 @@
         android:text="Login"
         android:textSize="@dimen/_20sdp"
         android:layout_marginTop="@dimen/_30sdp"
-        android:textColor="@color/color1"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"
         android:layout_margin="30dp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/logo"
@@ -46,13 +47,13 @@
         android:layout_height="wrap_content"
         android:hint="Email"
         android:textSize="@dimen/_13sdp"
-        android:textColor="@color/color1"
         android:drawablePadding="10dp"
         android:drawableEnd="@drawable/baseline_email_24"
         android:padding="20dp"
         android:inputType="textEmailAddress"
         android:layout_margin="30dp"
-        android:textColorHint="@color/color1"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"
         android:background="@drawable/edittext_shape"
         app:layout_constraintTop_toBottomOf="@id/text1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,27 +84,13 @@
             android:hint="Password"
             android:textSize="@dimen/_13sdp"
             android:backgroundTint="@color/white"
-            android:textColor="@color/color1"
-            android:drawablePadding="10dp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"            android:drawablePadding="10dp"
             android:drawableEnd="@drawable/baseline_lock_24"
             android:padding="20dp"
             android:inputType="textPassword"
-            android:textColorHint="@color/color1"
             />
     </LinearLayout>
-    <TextView
-        android:id="@+id/forgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="did you forget your password?"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_30sdp"
-        android:textSize="@dimen/_13sdp"
-        android:textColor="@color/color1"
-        app:layout_constraintTop_toBottomOf="@id/linear"
-        app:layout_constraintStart_toStartOf="parent">
-    </TextView>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login"
         android:layout_width="match_parent"
@@ -118,7 +105,7 @@
         android:layout_marginStart="@dimen/_20sdp"
         android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/button_shape"
-        app:layout_constraintTop_toBottomOf="@id/forgotPassword"
+        app:layout_constraintTop_toBottomOf="@id/linear"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
     <LinearLayout
@@ -136,8 +123,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="Create new Account?"
-            android:textColor="@color/color1"
-            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/textColor"            android:textSize="@dimen/_13sdp"
             ></TextView>
         <TextView
             android:id="@+id/text2"
@@ -145,7 +132,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="create"
-            android:textColor="@color/color3"
+            android:textColor="@color/color1"
             android:textSize="18sp"
             ></TextView>
     </LinearLayout>

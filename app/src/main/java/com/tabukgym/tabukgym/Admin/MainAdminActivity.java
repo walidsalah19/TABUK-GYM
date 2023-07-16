@@ -15,6 +15,7 @@ import com.tabukgym.tabukgym.Customer.CustomerProfile;
 import com.tabukgym.tabukgym.Customer.CustomerSubscription;
 import com.tabukgym.tabukgym.R;
 import com.tabukgym.tabukgym.UserAccess.LoginAllUsers;
+import com.tabukgym.tabukgym.UserAccess.MainUserAccess;
 import com.tabukgym.tabukgym.databinding.ActivityMainAdminBinding;
 
 public class MainAdminActivity extends AppCompatActivity {
@@ -39,7 +40,7 @@ public class MainAdminActivity extends AppCompatActivity {
                     changeFragment(new AdminDelivery());
                 }
                 else if (item.getItemId() == R.id.logout) {
-                    startActivity(new Intent(MainAdminActivity.this, LoginAllUsers.class));
+                    startActivity(new Intent(MainAdminActivity.this, MainUserAccess.class));
                 }
                 return true;
             }

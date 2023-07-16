@@ -10,6 +10,7 @@
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -33,8 +34,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="User Create Account"
-                android:textColor="@color/color1"
-                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"                android:textSize="25sp"
                 android:textStyle="bold"
                 android:gravity="center"
                 app:layout_constraintTop_toTopOf="@id/back"
@@ -54,8 +55,8 @@
                 android:hint="User Name"
                 android:inputType="text"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text1" />
@@ -73,8 +74,8 @@
                 android:hint=" Email"
                 android:inputType="textEmailAddress"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edittextUserName" />
@@ -110,8 +111,8 @@
                     android:inputType="textPassword"
                     android:padding="20dp"
                     android:backgroundTint="@color/white"
-                    android:textColor="@color/color1"
-                    android:textColorHint="@color/color1"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -128,8 +129,8 @@
                 android:hint="Phone"
                 android:inputType="phone"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/linear" />
@@ -146,8 +147,8 @@
                 android:hint="Age"
                 android:inputType="number"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edittextUserNameAr" />
@@ -164,8 +165,8 @@
                 android:hint="Height"
                 android:inputType="number"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/userAge" />
@@ -182,8 +183,8 @@
                 android:hint="Weight"
                 android:inputType="number"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/userheight" />
@@ -230,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:textColor="@color/color1"
-                    android:text="Do you hava Account?  "
+                    android:text="Do you hava Account? "
                     android:textSize="18sp"></TextView>
 
                 <TextView
@@ -238,7 +239,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Create account"
+                    android:text="Login"
                     android:textColor="@color/color3"
                     android:textSize="18sp"></TextView>
             </LinearLayout>

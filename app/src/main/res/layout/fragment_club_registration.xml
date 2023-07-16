@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -32,8 +33,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Club Create Account"
-                android:textColor="@color/color1"
-                android:textSize="25sp"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"                android:textSize="25sp"
                 android:textStyle="bold"
                 android:gravity="center"
                 app:layout_constraintTop_toTopOf="@id/back"
@@ -53,8 +54,8 @@
                 android:hint="Club Name"
                 android:inputType="text"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/text1" />
@@ -72,8 +73,8 @@
                 android:hint="Club Email"
                 android:inputType="textEmailAddress"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edittextUserName" />
@@ -109,8 +110,8 @@
                     android:inputType="textPassword"
                     android:padding="20dp"
                     android:backgroundTint="@color/white"
-                    android:textColor="@color/color1"
-                    android:textColorHint="@color/color1"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"
                     android:textSize="20sp" />
             </LinearLayout>
             <EditText
@@ -126,8 +127,8 @@
                 android:hint="Subscription price"
                 android:inputType="textEmailAddress"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/linear" />
@@ -144,8 +145,8 @@
                 android:hint="Phone"
                 android:inputType="phone"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/subscriptionPrice" />
@@ -162,8 +163,8 @@
                 android:hint="Commercial register "
                 android:inputType="number"
                 android:padding="20dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edittextUserNameAr" />
@@ -220,8 +221,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:textColor="@color/color1"
-                    android:text="Do you hava Account? "
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:text="Do you hava Account? "
                     android:textSize="18sp"></TextView>
 
                 <TextView
@@ -230,7 +231,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:text="Login"
-                    android:textColor="@color/color3"
+                    android:textColor="@color/color1"
                     android:textSize="18sp"></TextView>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

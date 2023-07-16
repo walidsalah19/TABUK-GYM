@@ -7,4 +7,6 @@
     <color name="color2">#FFF0E1</color>
     <color name="color3">#BC663D</color>
     <color name="color4">#DFB89C</color>
+    <color name="textColor">#BC663D</color>
+
 </resources>

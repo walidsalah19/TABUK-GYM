@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 import com.tabukgym.tabukgym.R;
 import com.tabukgym.tabukgym.UserAccess.LoginAllUsers;
+import com.tabukgym.tabukgym.UserAccess.MainUserAccess;
 import com.tabukgym.tabukgym.databinding.FragmentCustomerProfileBinding;
 
 public class CustomerProfile extends Fragment {
@@ -30,7 +31,7 @@ public class CustomerProfile extends Fragment {
         mBinding.btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getActivity(), LoginAllUsers.class));
+                startActivity(new Intent(getActivity(), MainUserAccess.class));
             }
         });
     }

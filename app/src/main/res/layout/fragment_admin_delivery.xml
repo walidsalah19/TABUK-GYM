@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Delivery"
-        android:textColor="@color/color1"
+        android:textColor="@color/textColor"
         android:textSize="@dimen/_20sdp"
         android:id="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +59,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Club Name :"
-                    android:textColor="@color/color1"
+                    android:textColor="@color/color3"
                     android:textSize="@dimen/_13sdp"
                     android:layout_weight="1" />
                 <TextView
@@ -82,7 +82,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Customer Name :"
-                    android:textColor="@color/color1"
+                    android:textColor="@color/color3"
                     android:textSize="@dimen/_13sdp"
                     android:layout_weight="1" />
                 <TextView
@@ -106,7 +106,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Delivery price :"
-                    android:textColor="@color/color1"
+                    android:textColor="@color/color3"
                     android:textSize="@dimen/_13sdp"
                     android:id="@+id/deviceDescription"
                     android:layout_weight="1" />
@@ -130,7 +130,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Duration :"
-                    android:textColor="@color/color1"
+                    android:textColor="@color/color3"
                     android:textSize="@dimen/_13sdp"
                     android:id="@+id/durationText"
                     android:layout_weight="1"
@@ -155,7 +155,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Date :"
-                    android:textColor="@color/color1"
+                    android:textColor="@color/color3"
                     android:textSize="@dimen/_13sdp"
                     android:id="@+id/dateText"
                     android:layout_weight="1"
@@ -180,7 +180,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Delivery status :"
-                    android:textColor="@color/color1"
+                    android:textColor="@color/color3"
                     android:textSize="@dimen/_13sdp"
                     android:id="@+id/sText"
                     android:layout_weight="1"

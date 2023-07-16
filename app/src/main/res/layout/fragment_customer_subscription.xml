@@ -10,8 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Subscriptions"
-        android:textColor="@color/color1"
-        android:textSize="@dimen/_20sdp"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/textColor"        android:textSize="@dimen/_20sdp"
         android:id="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,22 +32,22 @@
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white"
             android:padding="@dimen/_8sdp">
-             <TextView
-                 android:layout_width="wrap_content"
-                 android:layout_height="wrap_content"
-                 android:text="Club name"
-                 android:textColor="@color/color1"
-                 android:textSize="@dimen/_16sdp"
-                 android:id="@+id/clubName"
-                 android:layout_marginStart="@dimen/_10sdp"
-                 app:layout_constraintStart_toStartOf="parent"
-                 app:layout_constraintEnd_toEndOf="parent"
-                 app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Club name"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:textSize="@dimen/_16sdp"
+                android:id="@+id/clubName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,16 +58,16 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Subscription price :"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/deviceDescription"
                     android:layout_weight="1" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="300 Rs"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/subscriptionPrice"
                     android:layout_marginStart="@dimen/_14sdp"
                     android:layout_weight="1" />
@@ -82,8 +82,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Date :"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/dateText"
                     android:layout_weight="1"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -92,8 +92,8 @@
                     android:layout_height="wrap_content"
                     android:text="1/7/2022"
                     android:layout_weight="1"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/date"
                     android:layout_marginStart="@dimen/_14sdp" />
             </LinearLayout>
@@ -107,8 +107,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Subscription status :"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/sText"
                     android:layout_weight="1"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -117,9 +117,155 @@
                     android:layout_height="wrap_content"
                     android:text="finished"
                     android:layout_weight="1"
-                    android:textColor="@color/color1"
-                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
                     android:id="@+id/status"
+                    android:layout_marginStart="@dimen/_14sdp" />
+            </LinearLayout>
+           <!-- <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/phoneLinear"
+                app:layout_constraintTop_toBottomOf="@id/statusLinear">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Phone :"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:layout_weight="1"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="10201212"
+                    android:layout_weight="1"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:id="@+id/customerPhone"
+                    android:layout_marginStart="@dimen/_14sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/ageLinear"
+                app:layout_constraintTop_toBottomOf="@id/phoneLinear">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Age :"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:layout_weight="1"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="22"
+                    android:layout_weight="1"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:id="@+id/customerAge"
+                    android:layout_marginStart="@dimen/_14sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/hLinear"
+                app:layout_constraintTop_toBottomOf="@id/ageLinear">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Height :"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:layout_weight="1"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="180 cm"
+                    android:layout_weight="1"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:id="@+id/customerHeight"
+                    android:layout_marginStart="@dimen/_14sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/wLinear"
+                app:layout_constraintTop_toBottomOf="@id/hLinear">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Customer Weight :"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:layout_weight="1"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="80 kg"
+                    android:layout_weight="1"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:id="@+id/customerWeight"
+                    android:layout_marginStart="@dimen/_14sdp" />
+            </LinearLayout>-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/pLinear"
+                app:layout_constraintTop_toBottomOf="@id/statusLinear">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Subscription period :"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_weight="1"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="3 month"
+                    android:layout_weight="1"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:id="@+id/subPeriod"
+                    android:layout_marginStart="@dimen/_14sdp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/tranLinear"
+                app:layout_constraintTop_toBottomOf="@id/pLinear">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Training period :"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintStart_toStartOf="parent" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Evening Period"
+                    android:layout_weight="1"
+                    android:textColor="@color/textColor"
+                    android:textColorHint="@color/textColor"                    android:textSize="@dimen/_13sdp"
+                    android:id="@+id/trainingPeriod"
                     android:layout_marginStart="@dimen/_14sdp" />
             </LinearLayout>
 
@@ -127,5 +273,4 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
