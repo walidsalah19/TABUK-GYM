@@ -118,8 +118,11 @@ public class LoginAllUsers extends Fragment {
                     {
                         funLoginSuccessfully();
                     }
-                    else {
+                    else if(status.equals("new")){
                         funLoginField("Failed to sign in to your account,Admin Don't accept your account yet");
+                    }
+                    else {
+                        funLoginField("Failed to sign in to your account,Admin reject your account");
                     }
                 }
                 else
@@ -159,7 +162,7 @@ public class LoginAllUsers extends Fragment {
 
     private void funLoginSuccessfully()
     {
-        SweetAlertDialog success=SweetDialog.success(getContext(),"تم تسجيل الدخول بنجاح");
+        SweetAlertDialog success=SweetDialog.success(getContext(),"login successfully");
         success.show();
         success.setConfirmClickListener(new SweetAlertDialog.OnSweetClickListener() {
             @Override

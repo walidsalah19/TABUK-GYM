@@ -97,8 +97,12 @@ public class NewClubs extends Fragment {
        adapter.setOnItemClickListener(new NewClubAdapter.OnItemClickListener() {
            @Override
            public void onItemClicked(int pos) {
+               Bundle b=new Bundle();
+               b.putParcelable("club",clubs.get(pos));
+               ManageClubs m=new ManageClubs();
+               m.setArguments(b);
                getActivity().getSupportFragmentManager().beginTransaction()
-                       .replace(R.id.adminLayout,new ManageClubs()).addToBackStack(null).commit();
+                       .replace(R.id.adminLayout,m).addToBackStack(null).commit();
            }
        });
     }

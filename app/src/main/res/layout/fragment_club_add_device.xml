@@ -8,7 +8,8 @@
     android:background="@color/white">
    <androidx.core.widget.NestedScrollView
        android:layout_width="match_parent"
-       android:layout_height="match_parent">
+       android:layout_height="match_parent"
+       android:paddingBottom="@dimen/_10sdp">
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -66,7 +67,7 @@
         app:layout_constraintEnd_toEndOf="@id/imageCard"/>
 
     <EditText
-        android:id="@+id/edittextUserName"
+        android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_15sdp"
@@ -98,10 +99,10 @@
             android:textColorHint="@color/textColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/edittextUserName" />
+            app:layout_constraintTop_toBottomOf="@id/name" />
 
         <EditText
-        android:id="@+id/subscriptionPrice"
+        android:id="@+id/subscription"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_100sdp"
         android:layout_marginStart="@dimen/_15sdp"
@@ -119,7 +120,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/deviceNumber" />
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnCreateAccount"
+        android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_20sdp"
@@ -132,9 +133,11 @@
         android:textSize="@dimen/_20sdp"
         android:textStyle="bold"
         android:textAllCaps="false"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/subscriptionPrice" />
+        app:layout_constraintTop_toBottomOf="@id/subscription" />
     </androidx.constraintlayout.widget.ConstraintLayout>
    </androidx.core.widget.NestedScrollView>
 

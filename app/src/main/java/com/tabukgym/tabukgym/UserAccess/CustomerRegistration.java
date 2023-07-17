@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.tabukgym.tabukgym.CommonData;
+import com.tabukgym.tabukgym.MapsFragment;
 import com.tabukgym.tabukgym.Models.ClubModel;
 import com.tabukgym.tabukgym.Models.CustomerModel;
 import com.tabukgym.tabukgym.R;
@@ -46,7 +47,18 @@ public class CustomerRegistration extends Fragment {
         showPassword();
         login();
         back();
+        addLocation();
         return  mBinding.getRoot();
+    }
+    private void addLocation()
+    {
+        mBinding.SelectLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .add(R.id.userAccessLayout, new MapsFragment()).commit();
+            }
+        });
     }
     private void clickCreateAccount()
     {
@@ -66,6 +78,8 @@ public class CustomerRegistration extends Fragment {
         String height=mBinding.userheight.getText().toString();
         String weight=mBinding.userWeight.getText().toString();
         String password=mBinding.edittextPassword.getText().toString();
+        longitude=CommonData.longitude;
+        latitude=CommonData.latitude;
         if (TextUtils.isEmpty(name))
         {
             mBinding.edittextUserName.setError("Please enter your name");

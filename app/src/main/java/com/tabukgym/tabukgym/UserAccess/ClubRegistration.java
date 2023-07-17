@@ -27,6 +27,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.tabukgym.tabukgym.CommonData;
+import com.tabukgym.tabukgym.MapsFragment;
 import com.tabukgym.tabukgym.Models.ClubModel;
 import com.tabukgym.tabukgym.R;
 import com.tabukgym.tabukgym.SweetDialog;
@@ -56,6 +58,7 @@ public class ClubRegistration extends Fragment {
         login();
         back();
         getLogo();
+        addLocation();
         return  mBinding.getRoot();
     }
     private void startLoading()
@@ -113,6 +116,16 @@ public class ClubRegistration extends Fragment {
         });
 
     }
+    private void addLocation()
+    {
+        mBinding.SelectLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager().beginTransaction()
+                        .add(R.id.userAccessLayout, new MapsFragment()).commit();
+            }
+        });
+    }
     private void clickCreateAccount()
     {
         mBinding.btnCreateAccount.setOnClickListener(new View.OnClickListener() {
@@ -130,6 +143,8 @@ public class ClubRegistration extends Fragment {
         String phoneNum=mBinding.clubPhone.getText().toString();
         String clubCom=mBinding.clubComer.getText().toString();
         String password=mBinding.edittextPassword.getText().toString();
+        longitude= CommonData.longitude;
+        latitude=CommonData.latitude;
         if (TextUtils.isEmpty(clubName))
         {
             mBinding.clubName.setError("Please enter your name");
