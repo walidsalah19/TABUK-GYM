@@ -1,27 +1,24 @@
-package com.tabukgym.tabukgym.CommonAdapter;
+package com.tabukgym.tabukgym.Customer.Adapters;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.tabukgym.tabukgym.Models.SportModel;
 import com.tabukgym.tabukgym.Models.SubscriptionModel;
 import com.tabukgym.tabukgym.R;
 
 import java.util.ArrayList;
 
-public class SubscriptionAdapter extends RecyclerView.Adapter<SubscriptionAdapter.help>{
+public class CustomerSubscriptionsAdapter extends RecyclerView.Adapter<CustomerSubscriptionsAdapter.help>{
     private ArrayList<SubscriptionModel> arrayList;
     private Context context;
-    public SubscriptionAdapter(ArrayList<SubscriptionModel> arrayList, Context context) {
+    public CustomerSubscriptionsAdapter(ArrayList<SubscriptionModel> arrayList, Context context) {
         this.arrayList = arrayList;
         this.context=context;
     }
@@ -29,7 +26,7 @@ public class SubscriptionAdapter extends RecyclerView.Adapter<SubscriptionAdapte
     @NonNull
     @Override
     public help onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.subscription_adapter,parent,false);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.customer_subscription,parent,false);
         return new help(v);
     }
 
@@ -45,7 +42,6 @@ public class SubscriptionAdapter extends RecyclerView.Adapter<SubscriptionAdapte
         holder.customerWeight.setText(arrayList.get(position).getCustWeight());
         holder.subPeriod.setText(arrayList.get(position).getSubPeriod());
         holder.trainingPeriod.setText(arrayList.get(position).getTrainingPeriod());
-        holder.name.setText(arrayList.get(position).getCustName());
     }
 
     @Override
@@ -54,20 +50,16 @@ public class SubscriptionAdapter extends RecyclerView.Adapter<SubscriptionAdapte
     }
     public class help extends RecyclerView.ViewHolder
     {
-        TextView name,subscriptionPrice,date,status,customerPhone,customerAge
+        TextView clubName,subscriptionPrice,date,status,customerPhone,customerAge
                 ,customerHeight,customerWeight,subPeriod,trainingPeriod;
         public help(@NonNull View itemView) {
             super(itemView);
             subscriptionPrice=itemView.findViewById(R.id.subscriptionPrice);
             date=itemView.findViewById(R.id.date);
             status=itemView.findViewById(R.id.status);
-            customerPhone=itemView.findViewById(R.id.customerPhone);
-            customerAge=itemView.findViewById(R.id.customerAge);
-            customerHeight=itemView.findViewById(R.id.customerHeight);
-            customerWeight=itemView.findViewById(R.id.customerWeight);
+            clubName=itemView.findViewById(R.id.clubName);
             subPeriod=itemView.findViewById(R.id.subPeriod);
             trainingPeriod=itemView.findViewById(R.id.trainingPeriod);
-            name=itemView.findViewById(R.id.name);
         }
     }
 }
