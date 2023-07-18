@@ -53,7 +53,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rounded_user_image"
+                    android:id="@+id/image"
                     android:scaleType="fitXY"
                     android:src="@drawable/gym"/>
 
@@ -67,7 +67,7 @@
                 app:layout_constraintEnd_toEndOf="@id/imageCard"/>
 
             <EditText
-                android:id="@+id/edittextUserName"
+                android:id="@+id/name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
@@ -85,7 +85,7 @@
                 app:layout_constraintTop_toBottomOf="@id/addImage" />
 
             <EditText
-                android:id="@+id/subscriptionPrice"
+                android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_100sdp"
                 android:layout_marginStart="@dimen/_15sdp"
@@ -101,9 +101,9 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edittextUserName" />
+                app:layout_constraintTop_toBottomOf="@id/name" />
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnCreateAccount"
+                android:id="@+id/btnAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_20sdp"
@@ -112,13 +112,15 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
                 android:text="Add"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_20sdp"
                 android:textStyle="bold"
                 android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/subscriptionPrice" />
+                app:layout_constraintTop_toBottomOf="@id/description" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 

@@ -110,6 +110,7 @@ public class ClubRegistration extends Fragment {
             public void onComplete(@NonNull Task<Uri> task) {
                 if (task.isSuccessful()) {
                     Uri downloadUri=task.getResult();
+                    image=downloadUri.toString();
                     loading.dismiss();
                 }
             }
@@ -145,6 +146,8 @@ public class ClubRegistration extends Fragment {
         String password=mBinding.edittextPassword.getText().toString();
         longitude= CommonData.longitude;
         latitude=CommonData.latitude;
+        CommonData.longitude="";
+        CommonData.latitude="";
         if (TextUtils.isEmpty(clubName))
         {
             mBinding.clubName.setError("Please enter your name");

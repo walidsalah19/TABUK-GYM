@@ -49,7 +49,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:id="@+id/rounded_user_image"
+                    android:id="@+id/image"
                     android:scaleType="fitXY"
                     android:src="@drawable/gym"/>
 
@@ -62,7 +62,7 @@
                 app:layout_constraintTop_toBottomOf="@id/imageCard"
                 app:layout_constraintEnd_toEndOf="@id/imageCard"/>
             <EditText
-                android:id="@+id/edittextUserName"
+                android:id="@+id/clubName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
@@ -95,10 +95,10 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edittextUserName" />
+                app:layout_constraintTop_toBottomOf="@id/clubName" />
 
             <EditText
-                android:id="@+id/edittextUserNameAr"
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
@@ -117,7 +117,7 @@
                 app:layout_constraintTop_toBottomOf="@id/subscriptionPrice" />
 
             <EditText
-                android:id="@+id/edittextId"
+                android:id="@+id/clubComer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_15sdp"
@@ -133,18 +133,18 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edittextUserNameAr" />
+                app:layout_constraintTop_toBottomOf="@id/phone" />
             <ImageButton
                 android:layout_width="@dimen/_100sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:src="@drawable/baseline_my_location_24"
-                app:layout_constraintTop_toBottomOf="@id/edittextId"
+                app:layout_constraintTop_toBottomOf="@id/clubComer"
                 android:background="@drawable/button_shape"
                 android:layout_margin="@dimen/_10sdp"
                 android:id="@+id/SelectLocation"
                 app:layout_constraintStart_toStartOf="parent"/>
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnCreateAccount"
+                android:id="@+id/btnUpdate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="@dimen/_20sdp"
@@ -174,7 +174,7 @@
                 android:textAllCaps="false"
                 android:src="@drawable/baseline_logout_24"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btnCreateAccount" />
+                app:layout_constraintTop_toBottomOf="@id/btnUpdate" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>

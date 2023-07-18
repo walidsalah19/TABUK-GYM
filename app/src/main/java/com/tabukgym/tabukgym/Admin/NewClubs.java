@@ -49,7 +49,7 @@ public class NewClubs extends Fragment {
     private void recyclerViewComponent()
     {
         clubs =new ArrayList<>();
-        adapter=new NewClubAdapter(clubs);
+        adapter=new NewClubAdapter(clubs,getActivity());
         mBinding.newClubs.setLayoutManager(new LinearLayoutManager(getActivity()));
         mBinding.newClubs.setAdapter(adapter);
         getNewClubs();
