@@ -36,8 +36,6 @@ public class CustomerSubscription extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mBinding=FragmentCustomerSubscriptionBinding.inflate(inflater,container,false);
-
-
         customerId= FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
         ViewDialog.startLoading(getActivity());
         recyclerViewComponent();

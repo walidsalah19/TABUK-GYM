@@ -127,7 +127,7 @@ public class MackSubscription extends Fragment {
 
     private void addToDelivery() {
         String id=UUID.randomUUID().toString();
-        DeliveryModel m=new DeliveryModel(CommonData.clubModel.getName(),custmodel.getName(),date(),period,"start,",id);
+        DeliveryModel m=new DeliveryModel(CommonData.clubModel.getName(),custmodel.getName(),date(),period,"start,",id,custId);
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference(CommonData.deliverTable);
         databaseReference.child(id).setValue(m).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

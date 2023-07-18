@@ -1,15 +1,16 @@
 package com.tabukgym.tabukgym.Models;
 
 public class DeliveryModel {
-    String clubName,custName,date,duration,status,id;
+    String clubName,custName,date,duration,status,id,custId;
 
-    public DeliveryModel(String clubName, String custName, String date, String duration, String status, String id) {
+    public DeliveryModel(String clubName, String custName, String date, String duration, String status, String id, String custId) {
         this.clubName = clubName;
         this.custName = custName;
         this.date = date;
         this.duration = duration;
         this.status = status;
         this.id = id;
+        this.custId = custId;
     }
 
     public String getClubName() {
@@ -58,5 +59,13 @@ public class DeliveryModel {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public String getCustId() {
+        return custId;
+    }
+
+    public void setCustId(String custId) {
+        this.custId = custId;
     }
 }
