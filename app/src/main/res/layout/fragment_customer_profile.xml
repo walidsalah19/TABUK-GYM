@@ -59,6 +59,7 @@
                 android:background="@drawable/edittext_shape"
                 android:drawableEnd="@drawable/baseline_email_24"
                 android:drawablePadding="10dp"
+                android:enabled="false"
                 android:hint=" Email"
                 android:inputType="textEmailAddress"
                 android:padding="20dp"
@@ -68,7 +69,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/edittextUserName" />
             <EditText
-                android:id="@+id/edittextUserNameAr"
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
@@ -102,7 +103,7 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edittextUserNameAr" />
+                app:layout_constraintTop_toBottomOf="@id/phone" />
             <EditText
                 android:id="@+id/userheight"
                 android:layout_width="match_parent"
@@ -150,7 +151,7 @@
                 android:id="@+id/SelectLocation"
                 app:layout_constraintStart_toStartOf="parent"/>
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnCreateAccount"
+                android:id="@+id/btnUpdate"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="20dp"
@@ -180,7 +181,7 @@
                 android:textAllCaps="false"
                 android:src="@drawable/baseline_logout_24"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/btnCreateAccount" />
+                app:layout_constraintTop_toBottomOf="@id/btnUpdate" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

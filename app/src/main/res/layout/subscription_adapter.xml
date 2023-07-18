@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:id="@+id/priceLinear"
-                app:layout_constraintTop_toBottomOf="@id/clubName">
+                app:layout_constraintTop_toBottomOf="@id/name">
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -239,6 +239,7 @@
                     android:textColor="@color/textColor"
                     android:textColorHint="@color/textColor"
                     android:layout_weight="1"
+                    android:textSize="@dimen/_13sdp"
                     app:layout_constraintStart_toStartOf="parent" />
                 <TextView
                     android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.tabukgym.tabukgym.CommonData;
 import com.tabukgym.tabukgym.R;
 import com.tabukgym.tabukgym.databinding.FragmentPaymentBinding;
 
@@ -18,6 +19,9 @@ public class Payment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mBinding=FragmentPaymentBinding.inflate(inflater,container,false);
+        mBinding.price.setText(CommonData.price+"");
+        mBinding.delivery.setText(CommonData.delivery+"");
+        mBinding.total.setText((CommonData.delivery+CommonData.price)+"");
         back();
         return mBinding.getRoot();
     }

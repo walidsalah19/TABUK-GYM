@@ -16,7 +16,6 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.tabukgym.tabukgym.Admin.Adapter.NewClubAdapter;
-import com.tabukgym.tabukgym.Admin.ManageClubs;
 import com.tabukgym.tabukgym.CommonData;
 import com.tabukgym.tabukgym.Customer.Club.ClubDetailsTabs;
 import com.tabukgym.tabukgym.Models.ClubModel;
@@ -99,10 +98,9 @@ public class ClubFragment extends Fragment {
         adapter.setOnItemClickListener(new NewClubAdapter.OnItemClickListener() {
             @Override
             public void onItemClicked(int pos) {
-                Bundle b=new Bundle();
-                b.putString("clubId",clubs.get(pos).getId());
+                CommonData.clubId=clubs.get(pos).getId();
+                CommonData.clubModel =clubs.get(pos);
                 ClubDetailsTabs m=new ClubDetailsTabs();
-                m.setArguments(b);
                 getActivity().getSupportFragmentManager().beginTransaction()
                         .replace(R.id.customerLayout,new ClubDetailsTabs()).addToBackStack(null).commit();
             }
