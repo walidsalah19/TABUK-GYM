@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "138012831179",
-    "project_id": "tabuk-ac8a0",
-    "storage_bucket": "tabuk-ac8a0.appspot.com"
+    "project_number": "1028518840653",
+    "project_id": "tabukgym-bdf4a",
+    "storage_bucket": "tabukgym-bdf4a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:138012831179:android:b8de8df6ef6a0e42851a4e",
+        "mobilesdk_app_id": "1:1028518840653:android:57dcc370dd0301a2618f04",
         "android_client_info": {
           "package_name": "com.tabukgym.tabukgym"
         }
       },
       "oauth_client": [
         {
-          "client_id": "138012831179-e59o2kq9fapo2oqd154le7oa41nfbt9e.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.tabukgym.tabukgym",
-            "certificate_hash": "b3852f47eca94b777704e0ad0123f91f1b70793d"
-          }
-        },
-        {
-          "client_id": "138012831179-9qihgg4gdt86vfhl2l8s28329f9hmmkn.apps.googleusercontent.com",
+          "client_id": "1028518840653-n6p338iq83cssvikjcpanellbcddq8ih.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAh3i05UToRXkeXoMCCloadF1LfNJhLSZo"
+          "current_key": "AIzaSyD6f_mdcpJi1XTdoS7BwGjNIb7aLE-bOyQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "138012831179-9qihgg4gdt86vfhl2l8s28329f9hmmkn.apps.googleusercontent.com",
+              "client_id": "1028518840653-n6p338iq83cssvikjcpanellbcddq8ih.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

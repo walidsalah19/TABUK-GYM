@@ -79,7 +79,7 @@ public class ClubFragment extends Fragment {
     }
     private void receiveData(DataSnapshot snapshot){
         String status = snapshot.child("status").getValue().toString();
-        if (status.equals("new")) {
+        if (status.equals("accept")) {
             String name = snapshot.child("name").getValue().toString();
             String email = snapshot.child("email").getValue().toString();
             String longitude = snapshot.child("longitude").getValue().toString();

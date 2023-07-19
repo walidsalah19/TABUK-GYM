@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,6 +27,7 @@ import com.tabukgym.tabukgym.ViewDialog;
 import com.tabukgym.tabukgym.databinding.FragmentMackSubscribtionBinding;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 import java.util.UUID;
@@ -41,6 +43,9 @@ public class MackSubscription extends Fragment {
         mBinding=FragmentMackSubscribtionBinding.inflate(inflater,container,false);
         ViewDialog.startLoading(getActivity());
         custId= FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
+        deliverySpinner();
+        periodSpinner();
+        monthsSpinner();
         getCustData();
         sendRequest();
         back();
@@ -89,9 +94,9 @@ public class MackSubscription extends Fragment {
 
     private void checkData() {
         String subId= UUID.randomUUID().toString();
-        period=mBinding.subPeriod.getSelectedItem().toString();
-        String month=mBinding.months.getSelectedItem().toString();
-        String delivery=mBinding.delivery.getSelectedItem().toString();
+        period=mBinding.subPeriod.getText().toString();
+        String month=mBinding.months.getText().toString();
+        String delivery=mBinding.delivery.getText().toString();
         int subPrice=Integer.parseInt(month)*Integer.parseInt(CommonData.clubModel.getSubPrice());
         CommonData.price=subPrice;
         SubscriptionModel model=new SubscriptionModel(CommonData.clubModel.getName(),custmodel.getName(),
@@ -107,15 +112,15 @@ public class MackSubscription extends Fragment {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful())
                 {
-                    ViewDialog.funSuccessfully("Add Subscription Successfully",getContext());
                     if (delivery.equals("Yes"))
                     {
                         addToDelivery();
                         CommonData.delivery=300;
                     }
                     else{
+                        ViewDialog.funSuccessfully("Add Subscription Successfully",getContext());
                         CommonData.delivery=0;
-                        payment();
+                        changeFragment(new Payment());
                     }
                 }
                 else {
@@ -134,7 +139,8 @@ public class MackSubscription extends Fragment {
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful())
                 {
-                    payment();
+                    ViewDialog.funSuccessfully("Add Subscription Successfully",getContext());
+                    changeFragment(new Payment());
                 }
             }
         });
@@ -144,14 +150,31 @@ public class MackSubscription extends Fragment {
     {
       return   new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date());
     }
-    private void payment()
+    private void monthsSpinner()
     {
-        mBinding.btnDelivery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                changeFragment(new Payment());
-            }
-        });
+        ArrayList<String > array=new ArrayList<>();
+        for(int i=1;i<=12;i++)
+        {
+            array.add(i+"");
+        }
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(getActivity(), R.layout.spinner_item,array);
+        mBinding.months.setAdapter(adapter);
+    }
+    private void periodSpinner()
+    {
+        ArrayList<String > array=new ArrayList<>();
+        array.add("Morning period");
+        array.add("Evening period");
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(getActivity(), R.layout.spinner_item,array);
+        mBinding.subPeriod.setAdapter(adapter);
+    }
+    private void deliverySpinner()
+    {
+        ArrayList<String > array=new ArrayList<>();
+        array.add("Yes");
+        array.add("No");
+        ArrayAdapter<String> adapter=new ArrayAdapter<String>(getActivity(), R.layout.spinner_item,array);
+        mBinding.delivery.setAdapter(adapter);
     }
     private void back()
     {

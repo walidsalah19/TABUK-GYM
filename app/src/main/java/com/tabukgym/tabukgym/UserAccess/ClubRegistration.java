@@ -48,11 +48,13 @@ public class ClubRegistration extends Fragment {
     public static final int PICK_IMAGE = 1;
     UploadTask uploadTask;
     StorageReference storageReference;
+    DatabaseReference database;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         mBinding=FragmentClubRegistrationBinding.inflate(inflater,container,false);
+        database= FirebaseDatabase.getInstance().getReference(CommonData.clubTable);
         clickCreateAccount();
         showPassword();
         login();
@@ -146,8 +148,6 @@ public class ClubRegistration extends Fragment {
         String password=mBinding.edittextPassword.getText().toString();
         longitude= CommonData.longitude;
         latitude=CommonData.latitude;
-        CommonData.longitude="";
-        CommonData.latitude="";
         if (TextUtils.isEmpty(clubName))
         {
             mBinding.clubName.setError("Please enter your name");
@@ -182,7 +182,10 @@ public class ClubRegistration extends Fragment {
             startLoading();
             ClubModel model=new ClubModel(clubName,email,longitude,latitude,image,subPrice
             ,phoneNum,clubCom,null,"new");
+            CommonData.longitude="";
+            CommonData.latitude="";
             createAccount(model,email,password);
+
         }
     }
     private void createAccount( ClubModel model,String email,String password)
@@ -207,7 +210,6 @@ public class ClubRegistration extends Fragment {
     }
     private void sendRequest( ClubModel model,String id)
     {
-        DatabaseReference database= FirebaseDatabase.getInstance().getReference("clubs");
         database.child(id).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
@@ -231,7 +233,7 @@ public class ClubRegistration extends Fragment {
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
                 dialog.dismiss();
-                startActivity(new Intent(getActivity(), LoginAllUsers.class));
+                startActivity(new Intent(getActivity(), MainUserAccess.class));
             }
         });
     }

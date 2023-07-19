@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,10 +9,10 @@
     android:background="@color/white">
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:id="@+id/customerLayout"
-        android:layout_alignParentTop="true"
-        android:layout_above="@id/customerBottomNav"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/customerBottomNav"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/customerBottomNav"
         android:layout_width="match_parent"
@@ -20,5 +21,6 @@
         android:animateLayoutChanges="true"
         app:labelVisibilityMode="labeled"
         app:menu="@menu/customer_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
         style="@style/BottomNavigationViewStyle"/>
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

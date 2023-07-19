@@ -72,6 +72,7 @@ public class ClubProfile extends Fragment {
                 {
                         receiveData(dataSnapshot);
                 }
+                ViewDialog.loading.dismiss();
             }
 
             @Override
@@ -235,7 +236,6 @@ public class ClubProfile extends Fragment {
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
                 dialog.dismiss();
-                startActivity(new Intent(getActivity(), LoginAllUsers.class));
             }
         });
     }

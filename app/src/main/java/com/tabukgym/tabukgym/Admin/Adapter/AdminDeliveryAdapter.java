@@ -27,7 +27,7 @@ public class AdminDeliveryAdapter extends RecyclerView.Adapter<AdminDeliveryAdap
     @NonNull
     @Override
     public help onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.customer_delivery,parent,false);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.admin_delivery,parent,false);
         return new help(v);
     }
 
@@ -38,7 +38,7 @@ public class AdminDeliveryAdapter extends RecyclerView.Adapter<AdminDeliveryAdap
         holder.date.setText(arrayList.get(position).getDate());
         holder.status.setText(arrayList.get(position).getStatus());
         holder.clubName.setText(arrayList.get(position).getClubName());
-        holder.customerName.setText(arrayList.get(position).getCustName());
+        holder.custName.setText(arrayList.get(position).getCustName());
 
     }
 
@@ -48,11 +48,11 @@ public class AdminDeliveryAdapter extends RecyclerView.Adapter<AdminDeliveryAdap
     }
     public class help extends RecyclerView.ViewHolder
     {
-        TextView duration,clubName,date,status,customerName;
+        TextView duration,clubName,date,status,custName;
         public help(@NonNull View itemView) {
             super(itemView);
             clubName=itemView.findViewById(R.id.clubName);
-            customerName=itemView.findViewById(R.id.customerName);
+            custName=itemView.findViewById(R.id.customerName);
             date=itemView.findViewById(R.id.date);
             status=itemView.findViewById(R.id.status);
             duration=itemView.findViewById(R.id.duration);

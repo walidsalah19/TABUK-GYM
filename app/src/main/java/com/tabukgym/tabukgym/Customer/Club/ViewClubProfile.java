@@ -31,7 +31,6 @@ public class ViewClubProfile extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         mBinding=FragmentViewClubProfileBinding.inflate(inflater,container,false);
-        ViewDialog.startLoading(getActivity());
         subscription();
         getClubData();
         showLocation();
@@ -42,7 +41,7 @@ public class ViewClubProfile extends Fragment {
         mBinding.btnOrderPackage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager().beginTransaction().add(R.id.customerLayout,new MackSubscription()).addToBackStack(null).commit();
+                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.customerLayout,new MackSubscription()).addToBackStack(null).commit();
 
             }
         });
@@ -92,9 +91,7 @@ public class ViewClubProfile extends Fragment {
         mBinding.clubName.setText(name);
         mBinding.phone.setText("Club Phone : "+phone);
         mBinding.packagePrice.setText("Subscription price : "+subPrice);
-        mBinding.phone.setText(phone);
         Glide.with(getActivity()).load(logo).into(mBinding.image);
-        ViewDialog.loading.dismiss();
 
     }
 }

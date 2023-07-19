@@ -25,7 +25,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/imageCard"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="@dimen/_200sdp"
         app:cardElevation="0dp"
         android:layout_margin="@dimen/_10sdp"
@@ -35,7 +35,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/image"
             android:scaleType="fitXY"

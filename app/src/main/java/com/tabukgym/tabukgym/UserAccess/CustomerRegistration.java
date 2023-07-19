@@ -21,6 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.tabukgym.tabukgym.CommonData;
+import com.tabukgym.tabukgym.Customer.MainCustomerActivity;
 import com.tabukgym.tabukgym.MapsFragment;
 import com.tabukgym.tabukgym.Models.ClubModel;
 import com.tabukgym.tabukgym.Models.CustomerModel;
@@ -167,7 +168,7 @@ public class CustomerRegistration extends Fragment {
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
                 dialog.dismiss();
-                startActivity(new Intent(getActivity(), LoginAllUsers.class));
+                startActivity(new Intent(getActivity(), MainCustomerActivity.class));
             }
         });
     }

@@ -49,7 +49,7 @@ public class ViewClubSport extends Fragment {
         getSports();
     }
     private void getSports() {
-        DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference(CommonData.deviceTable);
+        DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference(CommonData.sportTable);
         databaseReference.child(CommonData.clubId).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -59,8 +59,9 @@ public class ViewClubSport extends Fragment {
                         receiveData(snapshot);
                     }
                     adapter.notifyDataSetChanged();
-                    ViewDialog.loading.dismiss();
+
                 }
+                ViewDialog.loading.dismiss();
             }
 
             @Override

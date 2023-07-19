@@ -154,6 +154,7 @@ public class ClubAddDevice extends Fragment {
         database.child(clubId).child(model.getId()).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
+                ViewDialog.loading.dismiss();
                 if (task.isSuccessful())
                 {
                     ViewDialog.funSuccessfully("Add Devices Successfully",getContext());
@@ -161,6 +162,7 @@ public class ClubAddDevice extends Fragment {
                 else {
                     ViewDialog.funFailed("Failed Add Devices Successfully",getContext());
                 }
+
             }
         });
     }

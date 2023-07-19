@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:text="Profile"
         android:textColor="@color/textColor"
-        android:textColorHint="@color/textColor"        android:textSize="@dimen/_20sdp"
+        android:textColorHint="@color/textColor"
+        android:textSize="@dimen/_20sdp"
         android:id="@+id/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -20,23 +21,38 @@
         android:layout_marginTop="@dimen/_10sdp" />
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/_10sdp"
-        android:paddingBottom="@dimen/_5sdp"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/white">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Name"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:textSize="@dimen/_15sdp"
+                android:id="@+id/t1"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
             <EditText
                 android:id="@+id/edittextUserName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="20dp"
                 android:background="@drawable/edittext_shape"
                 android:drawablePadding="10dp"
@@ -47,7 +63,22 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-               app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@id/t1"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Email"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:textSize="@dimen/_15sdp"
+                android:id="@+id/t2"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edittextUserName"/>
 
             <EditText
                 android:id="@+id/edittextEmail"
@@ -67,7 +98,23 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edittextUserName" />
+                app:layout_constraintTop_toBottomOf="@id/t2" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer phone"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:textSize="@dimen/_15sdp"
+                android:id="@+id/t3"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/edittextEmail"/>
+
             <EditText
                 android:id="@+id/phone"
                 android:layout_width="match_parent"
@@ -85,7 +132,22 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/edittextEmail" />
+                app:layout_constraintTop_toBottomOf="@id/t3" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Age"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:textSize="@dimen/_15sdp"
+                android:id="@+id/t4"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/phone"/>
 
             <EditText
                 android:id="@+id/userAge"
@@ -103,7 +165,23 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/phone" />
+                app:layout_constraintTop_toBottomOf="@id/t4" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Height"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:textSize="@dimen/_15sdp"
+                android:id="@+id/t5"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userAge"/>
+
             <EditText
                 android:id="@+id/userheight"
                 android:layout_width="match_parent"
@@ -121,7 +199,23 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/userAge" />
+                app:layout_constraintTop_toBottomOf="@id/t5" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer Weight"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/textColor"
+                android:textSize="@dimen/_15sdp"
+                android:id="@+id/t6"
+                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userheight"/>
+
             <EditText
                 android:id="@+id/userWeight"
                 android:layout_width="match_parent"
@@ -139,7 +233,7 @@
                 android:textColorHint="@color/textColor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/userheight" />
+                app:layout_constraintTop_toBottomOf="@id/t6" />
 
             <ImageButton
                 android:layout_width="@dimen/_100sdp"
@@ -171,9 +265,10 @@
                 android:id="@+id/btnLogout"
                 android:layout_width="@dimen/_50sdp"
                 android:layout_height="@dimen/_50sdp"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="20dp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
                 android:layout_weight="1"
                 android:textColor="@color/white"
                 android:textSize="20sp"

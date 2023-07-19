@@ -11,7 +11,7 @@ public class SweetDialog {
         SweetAlertDialog success = new SweetAlertDialog(context, SweetAlertDialog.SUCCESS_TYPE);
         success.getProgressHelper().setBarColor(Color.parseColor("#1f8d28"));
         success.setTitleText(title);
-        success.setConfirmText("تم");
+        success.setConfirmText("Ok");
         success.setCancelable(false);
         return success;
     }
@@ -20,7 +20,7 @@ public class SweetDialog {
         SweetAlertDialog failed = new SweetAlertDialog(context, SweetAlertDialog.ERROR_TYPE);
         failed.getProgressHelper().setBarColor(Color.parseColor("#1f8d28"));
         failed.setTitleText(title);
-        failed.setConfirmText("تم");
+        failed.setConfirmText("Ok");
         failed.setCancelable(false);
         return failed;
     }

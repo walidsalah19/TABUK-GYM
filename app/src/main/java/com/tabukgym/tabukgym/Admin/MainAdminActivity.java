@@ -25,7 +25,7 @@ public class MainAdminActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mBinding=ActivityMainAdminBinding.inflate(getLayoutInflater());
         setContentView(mBinding.getRoot());
-        changeFragment(new ClubFragment());
+        changeFragment(new NewClubs());
         bottomNavigation();
     }
     private void bottomNavigation()

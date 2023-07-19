@@ -56,8 +56,9 @@ public class ViewClubDevices extends Fragment {
                         receiveData(snapshot);
                     }
                     adapter.notifyDataSetChanged();
-                    ViewDialog.loading.dismiss();
+
                 }
+                ViewDialog.loading.dismiss();
             }
 
             @Override

@@ -35,7 +35,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:id="@+id/priceLinear"
         android:layout_margin="@dimen/_10sdp"
         android:background="@drawable/edittext_shape"
@@ -50,18 +50,36 @@
             android:textSize="@dimen/_15sdp"
             android:id="@+id/deviceDescription"
             android:layout_weight="1" />
-        <Spinner
-            android:id="@+id/subPeriod"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/days"
             android:layout_weight="1"
-            android:entries="@array/period"
-            />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconTint="@color/color1"
+            android:layout_marginEnd="10dp"
+            app:startIconTint="@color/color1">
+
+            <AutoCompleteTextView
+                android:id="@+id/subPeriod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_shape"
+                android:enabled="false"
+                android:text="Morning period "
+                android:padding="10dp"
+                android:textColor="@color/color1"
+                android:textColorHint="@color/color1">
+
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:id="@+id/monthLinear"
         android:layout_margin="@dimen/_10sdp"
         android:background="@drawable/edittext_shape"
@@ -76,12 +94,31 @@
             android:textSize="@dimen/_15sdp"
             android:id="@+id/mtext"
             android:layout_weight="1" />
-        <Spinner
-            android:id="@+id/months"
-            android:layout_height="wrap_content"
-            android:layout_width="match_parent"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/mo"
             android:layout_weight="1"
-            android:entries="@array/months" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconTint="@color/color1"
+            android:layout_marginEnd="10dp"
+            app:startIconTint="@color/color1">
+
+            <AutoCompleteTextView
+                android:id="@+id/months"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_shape"
+                android:enabled="false"
+                android:text="1"
+                android:padding="10dp"
+                android:textColor="@color/color1"
+                android:textColorHint="@color/color1">
+
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -101,12 +138,30 @@
             android:textSize="@dimen/_15sdp"
             android:id="@+id/dtext"
             android:layout_weight="1" />
-        <Spinner
-            android:id="@+id/delivery"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_weight="1"
-            android:entries="@array/select" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:endIconTint="@color/color1"
+            android:layout_marginEnd="10dp"
+            app:startIconTint="@color/color1">
+
+            <AutoCompleteTextView
+                android:id="@+id/delivery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_shape"
+                android:enabled="false"
+                android:text="Yes"
+                android:padding="10dp"
+                android:textColor="@color/color1"
+                android:textColorHint="@color/color1">
+
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnDelivery"

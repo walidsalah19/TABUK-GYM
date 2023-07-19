@@ -146,6 +146,7 @@ public class ClubAddSport extends Fragment {
         database.child(clubId).child(model.getId()).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
+                ViewDialog.loading.dismiss();
                 if (task.isSuccessful())
                 {
                     ViewDialog.funSuccessfully("Add Sport Successfully",getContext());

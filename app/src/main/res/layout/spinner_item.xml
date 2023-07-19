@@ -7,5 +7,5 @@
     android:textColor="@color/textColor"
     android:textColorHint="@color/textColor"
     android:text="item"
-    android:layout_margin="@dimen/_6sdp">
+    android:layout_margin="@dimen/_10sdp">
 </TextView>

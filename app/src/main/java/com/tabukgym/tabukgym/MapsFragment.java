@@ -38,7 +38,7 @@ public class MapsFragment extends Fragment {
             // add_location_zoom_in_map(new LatLng(address.getLatitude(),address.getLongitude()),16,address.getAddressLine(0));
             googleMap.addMarker(new MarkerOptions().position(l).title("tabuk"));
             //mMap.getMinZoomLevel();
-            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(l, 20));
+            googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(l, 15));
             googleMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
             googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
                 @Override

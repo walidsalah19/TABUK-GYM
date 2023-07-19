@@ -36,10 +36,6 @@ public class CustomerSubscriptionsAdapter extends RecyclerView.Adapter<CustomerS
         holder.subscriptionPrice.setText(arrayList.get(position).getSubPrice());
         holder.date.setText(arrayList.get(position).getDate());
         holder.status.setText(arrayList.get(position).getSubStatus());
-        holder.customerPhone.setText(arrayList.get(position).getCustPhone());
-        holder.customerAge.setText(arrayList.get(position).getCustAge());
-        holder.customerHeight.setText(arrayList.get(position).getCustHeight());
-        holder.customerWeight.setText(arrayList.get(position).getCustWeight());
         holder.subPeriod.setText(arrayList.get(position).getSubPeriod());
         holder.trainingPeriod.setText(arrayList.get(position).getTrainingPeriod());
     }
@@ -50,8 +46,7 @@ public class CustomerSubscriptionsAdapter extends RecyclerView.Adapter<CustomerS
     }
     public class help extends RecyclerView.ViewHolder
     {
-        TextView clubName,subscriptionPrice,date,status,customerPhone,customerAge
-                ,customerHeight,customerWeight,subPeriod,trainingPeriod;
+        TextView clubName,subscriptionPrice,date,status,subPeriod,trainingPeriod;
         public help(@NonNull View itemView) {
             super(itemView);
             subscriptionPrice=itemView.findViewById(R.id.subscriptionPrice);

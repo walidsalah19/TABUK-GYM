@@ -61,8 +61,8 @@ public class ClubDevices extends Fragment {
                         receiveData(snapshot);
                     }
                     adapter.notifyDataSetChanged();
-                    ViewDialog.loading.dismiss();
                 }
+                ViewDialog.loading.dismiss();
             }
 
             @Override
