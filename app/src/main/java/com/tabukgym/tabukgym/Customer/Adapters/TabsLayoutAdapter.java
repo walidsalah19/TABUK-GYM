@@ -7,13 +7,14 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentStatePagerAdapter;
 
 import com.tabukgym.tabukgym.Customer.Club.ViewClubDevices;
 import com.tabukgym.tabukgym.Customer.Club.ViewClubProfile;
 import com.tabukgym.tabukgym.Customer.Club.ViewClubSport;
 import com.tabukgym.tabukgym.Customer.Club.ViewClubTrainingSchedule;
 
-public class TabsLayoutAdapter extends FragmentPagerAdapter {
+public class TabsLayoutAdapter extends FragmentStatePagerAdapter {
     public TabsLayoutAdapter(@NonNull FragmentManager fm) {
         super(fm);
     }
@@ -26,11 +27,8 @@ public class TabsLayoutAdapter extends FragmentPagerAdapter {
             return new ViewClubDevices();
         else if (position==2)
             return new ViewClubSport();
-        else if(position==3)
+        else
             return new ViewClubTrainingSchedule();
-
-
-        return null;
 
     }
 
@@ -48,10 +46,7 @@ public class TabsLayoutAdapter extends FragmentPagerAdapter {
             return new SpannableString("Devices");
         else if (position==2)
             return new SpannableString("Sports");
-        else if(position==3)
+        else
             return new SpannableString("Schedule");
-
-
-        return null;
     }
 }

@@ -155,7 +155,6 @@ public class CustomerProfile extends Fragment {
         database.child(model.getId()).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                ViewDialog.startLoading(getActivity());
                 if (task.isSuccessful())
                 {
                     funSuccessfully();
@@ -175,7 +174,6 @@ public class CustomerProfile extends Fragment {
             @Override
             public void onClick(SweetAlertDialog sweetAlertDialog) {
                 dialog.dismiss();
-                startActivity(new Intent(getActivity(), LoginAllUsers.class));
             }
         });
     }

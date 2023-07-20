@@ -23,12 +23,13 @@
             android:background="@color/white"
             android:padding="@dimen/_8sdp">
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Customer name"
                 android:textColor="@color/textColor"
                 android:textColorHint="@color/textColor"                android:textSize="@dimen/_16sdp"
                 android:id="@+id/name"
+                android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

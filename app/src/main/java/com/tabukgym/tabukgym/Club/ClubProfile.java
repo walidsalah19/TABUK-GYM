@@ -216,7 +216,6 @@ public class ClubProfile extends Fragment {
         database.child(model.getId()).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                ViewDialog.startLoading(getActivity());
                 if (task.isSuccessful())
                 {
                     funSuccessfully();
