@@ -66,7 +66,8 @@ public class ManageClubs extends Fragment {
         mBinding.btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                database.child(model.getId()).child("status").setValue("accept").addOnCompleteListener(new OnCompleteListener<Void>() {
+                database.child(model.getId()).child("status").setValue("accept")
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful())
@@ -83,7 +84,8 @@ public class ManageClubs extends Fragment {
         mBinding.btnReject.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                database.child(model.getId()).child("status").setValue("reject").addOnCompleteListener(new OnCompleteListener<Void>() {
+                database.child(model.getId()).child("status").setValue("reject")
+                        .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful())

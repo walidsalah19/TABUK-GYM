@@ -16,11 +16,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.tabukgym.tabukgym.CommonAdapter.SubscriptionAdapter;
 import com.tabukgym.tabukgym.CommonData;
 import com.tabukgym.tabukgym.Customer.Adapters.CustomerSubscriptionsAdapter;
 import com.tabukgym.tabukgym.Models.SubscriptionModel;
-import com.tabukgym.tabukgym.R;
 import com.tabukgym.tabukgym.ViewDialog;
 import com.tabukgym.tabukgym.databinding.FragmentCustomerSubscriptionBinding;
 
@@ -47,9 +45,9 @@ public class CustomerSubscription extends Fragment {
         adapter=new CustomerSubscriptionsAdapter(subscriptions,getActivity());
         mBinding.subscription.setLayoutManager(new LinearLayoutManager(getActivity()));
         mBinding.subscription.setAdapter(adapter);
-        getNewClubs();
+        getGetSubscriptions();
     }
-    private void getNewClubs() {
+    private void getGetSubscriptions() {
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference(CommonData.subTable);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

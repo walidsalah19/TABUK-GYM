@@ -19,7 +19,6 @@ import com.google.firebase.database.ValueEventListener;
 import com.tabukgym.tabukgym.CommonData;
 import com.tabukgym.tabukgym.Customer.Adapters.CustomerDeliveryAdapter;
 import com.tabukgym.tabukgym.Models.DeliveryModel;
-import com.tabukgym.tabukgym.Models.SubscriptionModel;
 import com.tabukgym.tabukgym.ViewDialog;
 import com.tabukgym.tabukgym.databinding.FragmentCustomerDeliveryBinding;
 
@@ -46,9 +45,9 @@ public class CustomerDelivery extends Fragment {
         adapter=new CustomerDeliveryAdapter(delivery,getActivity());
         mBinding.delivery.setLayoutManager(new LinearLayoutManager(getActivity()));
         mBinding.delivery.setAdapter(adapter);
-        getNewClubs();
+        getDelivery();
     }
-    private void getNewClubs() {
+    private void getDelivery() {
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference(CommonData.deliverTable);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

@@ -34,292 +34,293 @@
         android:layout_below="@id/text"
         android:layout_marginBottom="@dimen/_20sdp">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/white">
-
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginStart="@dimen/_10sdp"
-        android:text="Card Number"
-        android:textColor="@color/color1"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-        <LinearLayout
-            android:id="@+id/card1"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/edittext_shape"
-            android:orientation="horizontal"
-            android:padding="10dp"
-            app:layout_constraintTop_toBottomOf="@id/text1"
-            tools:layout_editor_absoluteX="10dp">
+            android:layout_height="match_parent"
+            android:background="@color/white">
 
-            <EditText
-                android:id="@+id/edittextCardNumber"
+            <TextView
+                android:id="@+id/text1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
-                android:background="@color/white"
-                android:hint="*********"
-                android:inputType="numberPassword"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="Card Number"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_shape"
+                android:orientation="horizontal"
                 android:padding="10dp"
+                app:layout_constraintTop_toBottomOf="@id/text1"
+                tools:layout_editor_absoluteX="10dp">
+
+                <EditText
+                    android:id="@+id/edittextCardNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:hint="*********"
+                    android:inputType="numberPassword"
+                    android:padding="10dp"
+                    android:textColor="@color/color1"
+                    android:textColorHint="@color/color1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text1" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/baseline_credit_card_24"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Card Name"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card1" />
+
+            <EditText
+                android:id="@+id/cardOwner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edittext_shape"
+                android:hint="Card Name"
+                android:inputType="text"
+                android:padding="20dp"
                 android:textColor="@color/color1"
                 android:textColorHint="@color/color1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text1" />
+                app:layout_constraintTop_toBottomOf="@id/text2" />
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card expiry date"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@id/card2"
+                app:layout_constraintTop_toTopOf="@id/linear3" />
 
-            <ImageView
-                android:layout_width="30dp"
-                android:layout_height="20dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/baseline_credit_card_24"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/linear3"
+                android:layout_margin="@dimen/_7sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardOwner">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cvc"
+                    android:textColor="@color/color1"
+                    android:textSize="20sp"
+                    android:layout_gravity="start"
+                    app:layout_constraintStart_toStartOf="@id/cardOwner"
+                    app:layout_constraintTop_toBottomOf="@id/cardOwner" />
+                <EditText
+                    android:id="@+id/cvc"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="123"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@color/color1"
+                    android:textColorHint="@color/color1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/text2" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/card2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </LinearLayout>
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_marginTop="10dp"
-        android:text="Card Name"
-        android:textColor="@color/color1"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/card1" />
+                app:layout_constraintTop_toBottomOf="@id/text3">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/days"
+                    android:layout_weight="1"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    app:endIconTint="@color/color1"
+                    android:layout_marginEnd="10dp"
+                    app:startIconTint="@color/color1">
 
-        <EditText
-            android:id="@+id/cardOwner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/edittext_shape"
-            android:hint="Card Name"
-            android:inputType="text"
-            android:padding="20dp"
-            android:textColor="@color/color1"
-            android:textColorHint="@color/color1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text2" />
-    <TextView
-        android:id="@+id/text3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Card expiry date"
-        android:textColor="@color/color1"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@id/card2"
-        app:layout_constraintTop_toTopOf="@id/linear3" />
+                    <AutoCompleteTextView
+                        android:id="@+id/daysSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_shape"
+                        android:enabled="false"
+                        android:text="1"
+                        android:padding="10dp"
+                        android:textColor="@color/color1"
+                        android:textColorHint="@color/color1">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/linear3"
-        android:layout_margin="@dimen/_7sdp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/cardOwner">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="cvc"
-            android:textColor="@color/color1"
-            android:textSize="20sp"
-            android:layout_gravity="start"
-            app:layout_constraintStart_toStartOf="@id/cardOwner"
-            app:layout_constraintTop_toBottomOf="@id/cardOwner" />
-        <EditText
-            android:id="@+id/cvc"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/edittext_shape"
-            android:hint="123"
-            android:inputType="text"
-            android:padding="10dp"
-            android:layout_marginTop="4dp"
-            android:textColor="@color/color1"
-            android:textColorHint="@color/color1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/text2" />
+                    </AutoCompleteTextView>
 
-    </LinearLayout>
-    <LinearLayout
-        android:id="@+id/card2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text3">
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/days"
-            android:layout_weight="1"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            app:endIconTint="@color/color1"
-            android:layout_marginEnd="10dp"
-            app:startIconTint="@color/color1">
+                </com.google.android.material.textfield.TextInputLayout>
 
-            <AutoCompleteTextView
-                android:id="@+id/daysSpinner"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/years"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    app:endIconTint="@color/color1"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    app:startIconTint="@color/color1">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/yearsSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_shape"
+                        android:enabled="false"
+                        android:text="2023"
+                        android:padding="10dp"
+                        android:textColor="@color/color1"
+                        android:textColorHint="@color/color1">
+
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear3">
+
+                <TextView
+                    android:id="@+id/login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/textColor"
+                    android:text="Subscription Price :  "
+                    android:textSize="@dimen/_16sdp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="350 RS"
+                    android:id="@+id/price"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_18sdp"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/textColor"
+                    android:text="Delivery Price :  "
+                    android:textSize="@dimen/_16sdp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="300 RS"
+                    android:id="@+id/delivery"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_18sdp"></TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/linear5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear4">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/textColor"
+                    android:text="Total Price :  "
+                    android:textSize="@dimen/_16sdp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="650 RS"
+                    android:id="@+id/total"
+                    android:textColor="@color/textColor"
+                    android:textSize="@dimen/_18sdp"></TextView>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDelivery"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
                 android:layout_weight="1"
-                android:background="@drawable/edittext_shape"
-                android:enabled="false"
-                android:text="1"
-                android:padding="10dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1">
+                android:background="@drawable/button_shape"
+                android:text="Pay"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linear5" />
 
-            </AutoCompleteTextView>
-
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/years"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            app:endIconTint="@color/color1"
-            android:layout_weight="1"
-            android:layout_marginEnd="10dp"
-            app:startIconTint="@color/color1">
-
-            <AutoCompleteTextView
-                android:id="@+id/yearsSpinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/edittext_shape"
-                android:enabled="false"
-                android:text="2023"
-                android:padding="10dp"
-                android:textColor="@color/color1"
-                android:textColorHint="@color/color1">
-
-            </AutoCompleteTextView>
-
-        </com.google.android.material.textfield.TextInputLayout>
-    </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linear2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linear3">
-
-            <TextView
-                android:id="@+id/login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="@color/textColor"
-                android:text="Subscription Price :  "
-                android:textSize="@dimen/_16sdp"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="350 RS"
-                android:id="@+id/price"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/_18sdp"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linear4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linear2">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="@color/textColor"
-                android:text="Delivery Price :  "
-                android:textSize="@dimen/_16sdp"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="300 RS"
-                android:id="@+id/delivery"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/_18sdp"></TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/linear5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:orientation="horizontal"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linear4">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:textColor="@color/textColor"
-                android:text="Total Price :  "
-                android:textSize="@dimen/_16sdp"></TextView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="650 RS"
-                android:id="@+id/total"
-                android:textColor="@color/textColor"
-                android:textSize="@dimen/_18sdp"></TextView>
-        </LinearLayout>
-
-        <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnDelivery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="20dp"
-        android:layout_weight="1"
-        android:background="@drawable/button_shape"
-        android:text="Pay"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textAllCaps="false"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/linear5" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
+
 </RelativeLayout>

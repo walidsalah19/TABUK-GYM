@@ -151,7 +151,8 @@ public class ClubAddDevice extends Fragment {
 
     private void addToDatabase(DeviceModel model) {
 
-        database.child(clubId).child(model.getId()).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
+        database.child(clubId).child(model.getId()).setValue(model)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 ViewDialog.loading.dismiss();

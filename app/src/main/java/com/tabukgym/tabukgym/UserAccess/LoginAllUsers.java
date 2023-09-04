@@ -95,7 +95,6 @@ public class LoginAllUsers extends Fragment {
                     else
                     {
                         checkClubCorrectly(task.getResult().getUser().getUid().toString());
-
                     }
                 }
                 else

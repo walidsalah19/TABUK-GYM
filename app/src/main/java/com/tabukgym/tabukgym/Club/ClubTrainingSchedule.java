@@ -38,6 +38,7 @@ public class ClubTrainingSchedule extends Fragment {
     public static final int PICK_IMAGE = 1;
     private UploadTask uploadTask;
     private StorageReference storageReference;
+    private int add=0;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -45,10 +46,16 @@ public class ClubTrainingSchedule extends Fragment {
         mBinding=FragmentClubTrainingScheduleBinding.inflate(inflater,container,false);
         clubId= FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
         ViewDialog.startLoading(getActivity());
-        getSchedule();
         addImage();
         return mBinding.getRoot();
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        getSchedule();
+    }
+
     private void getSchedule()
     {
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference(CommonData.scheduleTable);
@@ -92,6 +99,7 @@ public class ClubTrainingSchedule extends Fragment {
                 ViewDialog.startLoading(getActivity());
                 Glide.with(getActivity()).load(data.getData().toString()).into(mBinding.image);
                 saveImage(data.getData());
+                add++;
             }
         }
     }

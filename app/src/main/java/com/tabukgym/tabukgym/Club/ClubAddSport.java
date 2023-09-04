@@ -143,7 +143,8 @@ public class ClubAddSport extends Fragment {
 
     private void addToDatabase(SportModel model) {
 
-        database.child(clubId).child(model.getId()).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
+        database.child(clubId).child(model.getId()).setValue(model)
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 ViewDialog.loading.dismiss();

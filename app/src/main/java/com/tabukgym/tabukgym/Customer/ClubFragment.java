@@ -53,9 +53,9 @@ public class ClubFragment extends Fragment {
         adapter=new NewClubAdapter(clubs,getActivity());
         mBinding.newClubs.setLayoutManager(new LinearLayoutManager(getActivity()));
         mBinding.newClubs.setAdapter(adapter);
-        getNewClubs();
+        getClubs();
     }
-    private void getNewClubs() {
+    private void getClubs() {
         DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference(CommonData.clubTable);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

@@ -52,6 +52,5 @@ public class ClubMainActivity extends AppCompatActivity {
     {
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.clubLayout,fragment).commit();
-
     }
 }
